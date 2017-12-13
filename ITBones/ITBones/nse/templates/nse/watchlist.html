@@ -1,0 +1,23 @@
+﻿{% extends "nse/layout.html" %}
+
+{% block content %}
+
+{% load render_table from django_tables2 %}
+{% load static %}
+
+<h2>My Watch List </h2>
+
+<head>
+        <link rel="stylesheet" href="{% static 'django_tables2/themes/paleblue/css/screen.css' %}" />
+    </head>
+    <body>
+
+        {% render_table table %}
+    </body>
+
+<div class="container">
+    <a href="addwatchlist" class="btn btn-info" role="button">Add Items</a>
+</div>
+
+{% endblock %}
+

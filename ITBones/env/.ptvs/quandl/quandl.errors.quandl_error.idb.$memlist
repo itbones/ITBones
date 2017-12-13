@@ -1,0 +1,10 @@
+InvalidDataError
+NotFoundError
+InvalidRequestError
+ForbiddenError
+LimitExceededError
+ColumnNotFound
+QuandlError
+AuthenticationError
+InternalServerError
+ServiceUnavailableError

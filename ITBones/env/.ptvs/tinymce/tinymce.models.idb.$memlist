@@ -1,0 +1,5 @@
+add_introspection_rules
+models
+HTMLField
+tinymce_widgets
+admin_widgets

@@ -1,0 +1,76 @@
+﻿{% extends "nse/layout.html" %}
+
+{% block content %}
+
+{# Load the tag library #}
+{% load bootstrap3 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{# Display django.contrib.messages as Bootstrap alerts #}
+
+{# Display a form #}
+<script>
+    
+    function selcode(id) { 
+        
+        z = id.options[id.selectedIndex].text;
+        console.log(id, z);
+        document.getElementById('id_stock_desc').value = z;
+}
+
+</script>
+<script>
+    $(document).ready(function(){
+    $("id_stock_desc").change(function(){
+        alert('itemclicked');
+    });
+});
+</script>
+<form class="form-horizontal" method="post">
+  {% csrf_token %}
+  
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Stock Code</label>
+    <div class="col-sm-10">
+     <select name="stock_code" onchange="selcode(this)" >
+    {% for stock in stock_list %}
+            <option value="{{stock.0}}"> {{stock.0}}: {{stock.1}}</option>
+    {% endfor %}
+</select>
+   
+      {#   {{ form.stock_desc }}    used as sample       #} 
+    </div>
+  </div>
+
+<div class="form-group" >
+    <label class="control-label col-sm-2" for="pwd">Notification Values</label>
+    <div class="col-sm-10"> 
+      <input type="number" step="0.01" class="form-control" name="notval1" placeholder="Buy More Notification" required> <br />
+      <input type="number" step="0.01" class="form-control" name="notval2" placeholder="Sell Notification" required> <br />
+         <input type="number" step="0.01" class="form-control" name="notval3" placeholder="Stop Loss Notification" required> <br />
+    </div>
+        </div>
+
+
+<div class="form-group">
+    <label class="control-label col-sm-2" for="pwd">Notes</label>
+    <div class="col-sm-10"> 
+      <textarea class="form-control" name="notes" > </textarea>
+    </div>
+  </div>
+
+      {% buttons %}
+    <button type="submit" class="btn btn-primary">
+      {% bootstrap_icon "star" %} Submit
+    </button>
+    <a href="/nse" class="btn btn-warning" role="button">Cancel</a>
+  {% endbuttons %}
+
+</form>
+
+
+
+{% endblock %}

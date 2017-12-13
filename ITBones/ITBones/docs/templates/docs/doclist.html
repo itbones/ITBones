@@ -1,0 +1,24 @@
+﻿{% extends "docs/layout.html" %}
+
+{% block content %}
+
+{% load render_table from django_tables2 %}
+{% load static %}
+
+<h2>My Document List </h2>
+
+<head>
+        <link rel="stylesheet" href="{% static 'django_tables2/themes/paleblue/css/screen.css' %}" />
+
+    </head>
+    <body>
+        <div class="container">
+    <a href="adddoc" class="btn btn-info" role="button">Add Document</a>
+</div>
+<br />
+        {% render_table table %}
+    </body>
+
+
+{% endblock %}
+

@@ -1,0 +1,32 @@
+{% extends "money/layout.html" %}
+
+{% block content %}
+
+<p>
+    <a href="additem" class="btn btn-info" role="button">Add Stock</a>
+</p>
+
+<div class="container">
+  <h2>Stock Listing</h2>
+          
+  <table class="table table-bordered">
+
+    <tbody>
+     {% for stock  in table %}
+     
+      <tr>
+        <td> {{ stock.0 }}</td>
+        <td>{{ stock.1}}</td>
+      </tr>
+      
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<div class="container">
+
+      <a href="addstock" class="btn btn-primary" role="button">Add</a>
+     <a href="sendemail" class="btn btn-primary" role="button">Sent Email</a>
+</div>
+{% endblock %}
+

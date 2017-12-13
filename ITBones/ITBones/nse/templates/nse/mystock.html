@@ -1,0 +1,50 @@
+﻿{% extends "nse/layout.html" %}
+
+{% block content %}
+
+{% load render_table from django_tables2 %}
+{% load static %}
+
+<h2>My Detailed Stock List </h2>
+
+<head>
+        <link rel="stylesheet" href="{% static 'django_tables2/themes/paleblue/css/screen.css' %}" />
+    </head>
+    <body>
+        <!-- 
+        <div class="well" >
+        <div class="row"> <header>
+             <div class="col-sm-3 ">Invested Value</div>
+             <div class="col-sm-3">Current Value</div>
+             <div class="col-sm-3">Return Value</div>
+            <div class="col-sm-3">Return %</div>
+        </header></div>
+        <div class="row"> <h3><font color="red">
+             <div class="col-sm-3 " >{{investedtot}}</div>
+             <div class="col-sm-3">{{currentval}}</div>
+             <div class="col-sm-3">{{pltot}}</div>
+            <div class="col-sm-3">{{returnper}}</div>
+        </font></h3></div>
+        </div>
+        <div>
+-->
+        <div>
+            {% render_table table_sum %}
+        </div>
+        <div>
+{% render_table table %}
+        </div>
+        <h3> Stock News</h3>
+        <div>
+        {% render_table stock_news %}
+        </div>
+    </body>
+<br />
+<div class="container">
+    <a href="additem" class="btn btn-success" role="button">Add Stock</a>
+    <a href="addstocknews" class="btn btn-info" role="button">Add Stock News</a>
+    <a href="/nse" class="btn btn-warning" role="button">back</a>
+</div>
+
+{% endblock %}
+

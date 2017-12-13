@@ -1,0 +1,62 @@
+﻿{% extends "nse/layout.html" %}
+
+{% block content %}
+
+{% load render_table from django_tables2 %}
+{% load static %}
+
+<h2>Consolidated Stock Holdings </h2>
+
+<head>
+    <style>
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: left;
+}
+</style>
+        <link rel="stylesheet" href="{% static 'django_tables2/themes/paleblue/css/screen.css' %}" />
+    </head>
+    <body>
+        <div>
+{% render_table table_sum %}
+        </div>
+        
+        <!--
+        <div class="well" >
+        <div class="row"> <header>
+             <div class="col-sm-3 ">Invested Value</div>
+             <div class="col-sm-3">Current Value</div>
+             <div class="col-sm-3">Return Value</div>
+            <div class="col-sm-3">Return %</div>
+        </header></div>
+        <div class="row"> <h3><font color="red">
+             <div class="col-sm-3 " >{{investedtot}}</div>
+             <div class="col-sm-3">{{currentval}}</div>
+             <div class="col-sm-3">{{pltot}}</div>
+            <div class="col-sm-3">{{returnper}}</div>
+        </font></h3></div>
+        {{ user.username}}
+        </div>
+   -->
+        <div>
+ {% render_table table %}
+        </div>
+       
+    </body>
+
+<div class="container">
+    <a href="additem" class="btn btn-success" role="button">Add Stock</a>
+</div>
+
+<!--
+<div class="footer">
+
+</div>
+-->
+{% endblock %}
+

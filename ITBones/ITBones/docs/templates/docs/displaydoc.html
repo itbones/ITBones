@@ -1,0 +1,33 @@
+﻿{% extends "docs/layout.html" %}
+
+{% block content %}
+{# Load the tag library #}
+{% load bootstrap3 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{# Display django.contrib.messages as Bootstrap alerts #}
+{% bootstrap_messages %}
+
+{# Display a form #}
+<form  method="post" class="form">
+  {% csrf_token %}
+  <h2>  {{ form.doc_sub}}</h2>
+<div>
+    <p>
+{{ form.doc_area }}
+        {{ form.doc_subarea }}
+        {{ form.doc_tag }}
+    </p>
+    <p>
+        <br />
+       {{ form.doc_public|safe }}
+    </p>
+</div>
+  
+ 
+</form>
+
+{% endblock %}

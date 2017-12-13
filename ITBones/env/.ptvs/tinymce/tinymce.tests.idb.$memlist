@@ -1,0 +1,6 @@
+test_widgets
+test_models
+test_templatetags
+test_compressor
+test_views
+models

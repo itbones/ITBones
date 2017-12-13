@@ -1,0 +1,50 @@
+﻿{% extends "nse/layout.html" %}
+
+{% block content %}
+
+{% load render_table from django_tables2 %}
+{% load static %}
+
+<h2>P&L Statement </h2>
+
+<head>
+        <link rel="stylesheet" href="{% static 'django_tables2/themes/paleblue/css/screen.css' %}" />
+    </head>
+    <body>
+                <div>
+{% render_table table_sum %}
+        </div>
+        <!--
+        <div>
+        <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Buy Value</th>
+        <th>Sell Value</th>
+        <th>Return</th>
+        <th>Return %</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr >
+        <td>{{investedtot}}</td>
+        <td>{{currentval}}</td>
+        <td>{{pltot}}</td>
+         <td>{{returnper}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+            -->
+        <div>
+ {% render_table table %}
+        </div>
+       
+    </body>
+
+<div class="container">
+ 
+</div>
+
+{% endblock %}
+

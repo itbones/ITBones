@@ -1,0 +1,6 @@
+gzip_compressor
+patch
+RequestFactory
+TestCase
+TestCompressor
+zlib

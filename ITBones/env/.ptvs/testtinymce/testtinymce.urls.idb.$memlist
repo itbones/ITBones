@@ -1,0 +1,7 @@
+admin
+urlpatterns
+url
+staticfiles_urlpatterns
+tinymce
+include
+settings

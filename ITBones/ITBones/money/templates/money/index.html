@@ -1,0 +1,32 @@
+{% extends "money/layout.html" %}
+
+{% block content %}
+
+<div class="container">
+  <h2>Stock Listing</h2>
+          
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+     {% for stock in stock_list %}
+      <tr>
+        <td><a href="/money/{{ stock.id }}/" class="text-danger">{{ stock.stock_name }}</a></td>
+        <td> {{ stock.stock_code}}</td>
+        <td>{{ stock.stock_name}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<div class="container">
+
+      <a href="addstock" class="btn btn-primary" role="button">Add</a>
+     <a href="sendemail" class="btn btn-primary" role="button">Sent Email</a>
+</div>
+{% endblock %}

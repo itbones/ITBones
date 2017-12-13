@@ -1,0 +1,40 @@
+﻿{% extends "money/layout.html" %}
+
+{% block content %}
+{# Load the tag library #}
+{% load bootstrap3 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{# Display django.contrib.messages as Bootstrap alerts #}
+{% bootstrap_messages %}
+
+{# Display a form #}
+<form  method="post" class="form">
+  {% csrf_token %}
+  <h2>Sell Stock</h2>
+<table class="table table-condensed">
+    <tbody> 
+      <tr>
+      {{ form.as_table}}
+          
+      </tr>
+    </tbody>
+  </table>
+  
+  {% buttons %}
+    <button type="submit" class="btn btn-primary" name="sell_stock">
+      {% bootstrap_icon "star" %} Sell Stock
+    </button>
+        <button type="submit" class="btn btn-danger" name="delete_stock">
+      {% bootstrap_icon "trash" %} Delete Stock
+    </button>
+   
+  
+  {% endbuttons %}
+ 
+</form>
+
+{% endblock %}
