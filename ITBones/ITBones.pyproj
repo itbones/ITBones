@@ -73,6 +73,7 @@
     <Compile Include="ITBones\nse\urls.py" />
     <Compile Include="ITBones\nse\views.py" />
     <Compile Include="ITBones\nse\__init__.py" />
+    <Compile Include="ITBones\settings.py" />
     <Compile Include="ITBones\webmark\admin.py" />
     <Compile Include="ITBones\webmark\apps.py" />
     <Compile Include="ITBones\webmark\forms.py" />
@@ -87,7 +88,6 @@
     <Compile Include="ITBones\webmark\__init__.py" />
     <Compile Include="manage.py" />
     <Compile Include="ITBones\__init__.py" />
-    <Compile Include="ITBones\settings.py" />
     <Compile Include="ITBones\urls.py" />
     <Compile Include="ITBones\wsgi.py" />
   </ItemGroup>

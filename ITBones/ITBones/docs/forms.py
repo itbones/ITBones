@@ -7,9 +7,9 @@ from bootstrap3_datetime.widgets import DateTimePicker
 
 class doc_f_docmaster(forms.ModelForm):
     doc_public = forms.CharField(widget=TinyMCE(attrs={'cols': 180, 'rows': 80}))
-    doc_register = forms.CharField(widget=TinyMCE(attrs={'cols': 180, 'rows': 80}))
-    doc_private = forms.CharField(widget=TinyMCE(attrs={'cols': 180, 'rows': 80}))
-    doc_ref = forms.CharField(widget=TinyMCE(attrs={'cols': 180, 'rows': 40}))
+    doc_register = forms.CharField(widget=TinyMCE(attrs={'cols': 180, 'rows': 80}),required = False)
+    doc_private = forms.CharField(widget=TinyMCE(attrs={'cols': 180, 'rows': 80}),required = False)
+    doc_ref = forms.CharField(widget=TinyMCE(attrs={'cols': 180, 'rows': 40}),required = False)
     doc_sub = forms.CharField(widget=forms.TextInput(attrs={'size': '120', 'maxlength':'100'}))
     class Meta:
         model = doc_m_docmaster
