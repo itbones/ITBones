@@ -3,7 +3,8 @@ from django.conf.urls import url
 from . import views
 app = 'docs'
 urlpatterns = [
-    url(r'^$', views.doclist, name='Doc_List'),
+    url(r'^$', views.index, name='Index'),
+    url(r'^doclist$', views.doclist, name='Doc_List'),
     url(r'^adddoc$', views.adddoc, name='Add_Docs'),
     #url(r'^addwatchlist$', views.addwatchlistitem, name='Add_Watch_list'),
     #url(r'^plstatement$', views.plstatement, name='P_L_Statement'),

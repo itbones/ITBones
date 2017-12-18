@@ -14905,3 +14905,246 @@ System.FormatException: Input string was not in a correct format.
 2017-12-10T22:11:36: Start analysis
 2017-12-10T22:11:37: IncludeModulesFromModulePath = win32com
 2017-12-10T22:11:40: Deleting 0 files
+
+2017-12-15T20:16:49: Start analysis
+2017-12-15T20:16:50: IncludeModulesFromModulePath = win32com
+2017-12-15T20:16:52: Including c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\apiclient because apiclient.__init__ needs updating
+2017-12-15T20:16:52: Including c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\appconf because appconf.base needs updating
+2017-12-15T20:16:52: Including c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\gdstorage because gdstorage.storage needs updating
+2017-12-15T20:16:52: Including c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\googleapiclient because googleapiclient.channel needs updating
+2017-12-15T20:16:52: Including c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\httplib2 because httplib2.iri2uri needs updating
+2017-12-15T20:16:52: Including c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\oauth2client because oauth2client.client needs updating
+2017-12-15T20:16:53: Including c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1 because pyasn1.debug needs updating
+2017-12-15T20:16:53: Including c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1_modules because pyasn1_modules.pem needs updating
+2017-12-15T20:16:53: Including c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\rsa because rsa.asn1 needs updating
+2017-12-15T20:16:53: Including c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\uritemplate because uritemplate.api needs updating
+2017-12-15T20:16:53: Deleting 0 files
+2017-12-15T20:16:53: astropy.CallDepth = 0
+2017-12-15T20:16:53: delphixpy.CallDepth = 0
+2017-12-15T20:16:53: matplotlib.CallDepth = 3
+2017-12-15T20:16:53: pandas.CallDepth = 0
+2017-12-15T20:16:53: sympy.CallDepth = 0
+2017-12-15T20:16:53: Start group "c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\apiclient" with 1 files
+2017-12-15T20:16:53: Parsing complete
+2017-12-15T20:16:53: Analyzing "apiclient" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\apiclient\__init__.py")
+2017-12-15T20:16:53: Starting analysis of 1 modules
+2017-12-15T20:16:54: Analysis complete
+2017-12-15T20:16:54: Saving group "c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\apiclient"
+2017-12-15T20:16:54: End of group "c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\apiclient"
+2017-12-15T20:16:54: Start group "c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\appconf" with 3 files
+2017-12-15T20:16:54: Parsing complete
+2017-12-15T20:16:54: Analyzing "appconf.base" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\appconf\base.py")
+2017-12-15T20:16:54: Analyzing "appconf.utils" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\appconf\utils.py")
+2017-12-15T20:16:54: Analyzing "appconf" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\appconf\__init__.py")
+2017-12-15T20:16:54: Starting analysis of 3 modules
+2017-12-15T20:16:56: Analysis complete
+2017-12-15T20:16:56: Saving group "c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\appconf"
+2017-12-15T20:16:56: End of group "c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\appconf"
+2017-12-15T20:16:56: Start group "c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\gdstorage" with 2 files
+2017-12-15T20:16:56: Parsing complete
+2017-12-15T20:16:56: Analyzing "gdstorage.storage" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\gdstorage\storage.py")
+2017-12-15T20:16:56: Analyzing "gdstorage" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\gdstorage\__init__.py")
+2017-12-15T20:16:56: Starting analysis of 2 modules
+2017-12-15T20:16:58: Analysis complete
+2017-12-15T20:16:58: Saving group "c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\gdstorage"
+2017-12-15T20:16:58: [ERROR] gdstorage.storage.GoogleDriveStorage.GoogleDriveStorage: Unknown has no name
+2017-12-15T20:16:58: [ERROR] gdstorage.storage.GoogleDriveStorage.GoogleDriveStorage: Unknown has no name
+2017-12-15T20:16:58: [ERROR] gdstorage.storage.GoogleDriveStorage.GoogleDriveStorage: Unknown has no name
+2017-12-15T20:16:58: [ERROR] gdstorage.storage.GoogleDriveStorage.GoogleDriveStorage: Unknown has no name
+2017-12-15T20:16:58: End of group "c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\gdstorage"
+2017-12-15T20:16:58: Start group "c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\googleapiclient" with 14 files
+2017-12-15T20:16:58: Parsing complete
+2017-12-15T20:16:58: Analyzing "googleapiclient.channel" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\googleapiclient\channel.py")
+2017-12-15T20:16:58: Analyzing "googleapiclient.discovery" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\googleapiclient\discovery.py")
+2017-12-15T20:16:58: Analyzing "googleapiclient.errors" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\googleapiclient\errors.py")
+2017-12-15T20:16:58: Analyzing "googleapiclient.http" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\googleapiclient\http.py")
+2017-12-15T20:16:58: Analyzing "googleapiclient.mimeparse" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\googleapiclient\mimeparse.py")
+2017-12-15T20:16:58: Analyzing "googleapiclient.model" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\googleapiclient\model.py")
+2017-12-15T20:16:58: Analyzing "googleapiclient.sample_tools" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\googleapiclient\sample_tools.py")
+2017-12-15T20:16:58: Analyzing "googleapiclient.schema" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\googleapiclient\schema.py")
+2017-12-15T20:16:58: Analyzing "googleapiclient._auth" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\googleapiclient\_auth.py")
+2017-12-15T20:16:58: Analyzing "googleapiclient" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\googleapiclient\__init__.py")
+2017-12-15T20:16:58: Analyzing "googleapiclient.discovery_cache.appengine_memcache" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\googleapiclient\discovery_cache\appengine_memcache.py")
+2017-12-15T20:16:58: Analyzing "googleapiclient.discovery_cache.base" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\googleapiclient\discovery_cache\base.py")
+2017-12-15T20:16:58: Analyzing "googleapiclient.discovery_cache.file_cache" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\googleapiclient\discovery_cache\file_cache.py")
+2017-12-15T20:16:58: Analyzing "googleapiclient.discovery_cache" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\googleapiclient\discovery_cache\__init__.py")
+2017-12-15T20:16:58: Starting analysis of 14 modules
+2017-12-15T20:16:59: Analysis complete
+2017-12-15T20:16:59: Saving group "c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\googleapiclient"
+2017-12-15T20:16:59: End of group "c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\googleapiclient"
+2017-12-15T20:16:59: Start group "c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\httplib2" with 2 files
+2017-12-15T20:17:00: Parsing complete
+2017-12-15T20:17:00: Analyzing "httplib2.iri2uri" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\httplib2\iri2uri.py")
+2017-12-15T20:17:00: Analyzing "httplib2" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\httplib2\__init__.py")
+2017-12-15T20:17:00: Starting analysis of 2 modules
+2017-12-15T20:17:01: Analysis complete
+2017-12-15T20:17:01: Saving group "c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\httplib2"
+2017-12-15T20:17:01: [ERROR] httplib2.Response.Response: Unknown has no name
+2017-12-15T20:17:01: [ERROR] httplib2.HTTPSConnectionWithTimeout.HTTPSConnectionWithTimeout: Unknown has no name
+2017-12-15T20:17:01: End of group "c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\httplib2"
+2017-12-15T20:17:01: Start group "c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\oauth2client" with 33 files
+2017-12-15T20:17:01: Parsing complete
+2017-12-15T20:17:01: Analyzing "oauth2client.client" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\oauth2client\client.py")
+2017-12-15T20:17:01: Analyzing "oauth2client.clientsecrets" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\oauth2client\clientsecrets.py")
+2017-12-15T20:17:01: Analyzing "oauth2client.crypt" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\oauth2client\crypt.py")
+2017-12-15T20:17:01: Analyzing "oauth2client.file" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\oauth2client\file.py")
+2017-12-15T20:17:01: Analyzing "oauth2client.service_account" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\oauth2client\service_account.py")
+2017-12-15T20:17:01: Analyzing "oauth2client.tools" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\oauth2client\tools.py")
+2017-12-15T20:17:01: Analyzing "oauth2client.transport" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\oauth2client\transport.py")
+2017-12-15T20:17:01: Analyzing "oauth2client._helpers" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\oauth2client\_helpers.py")
+2017-12-15T20:17:01: Analyzing "oauth2client._openssl_crypt" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\oauth2client\_openssl_crypt.py")
+2017-12-15T20:17:01: Analyzing "oauth2client._pkce" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\oauth2client\_pkce.py")
+2017-12-15T20:17:01: Analyzing "oauth2client._pure_python_crypt" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\oauth2client\_pure_python_crypt.py")
+2017-12-15T20:17:01: Analyzing "oauth2client._pycrypto_crypt" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\oauth2client\_pycrypto_crypt.py")
+2017-12-15T20:17:01: Analyzing "oauth2client" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\oauth2client\__init__.py")
+2017-12-15T20:17:01: Analyzing "oauth2client.contrib.appengine" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\oauth2client\contrib\appengine.py")
+2017-12-15T20:17:01: Analyzing "oauth2client.contrib.devshell" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\oauth2client\contrib\devshell.py")
+2017-12-15T20:17:01: Analyzing "oauth2client.contrib.dictionary_storage" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\oauth2client\contrib\dictionary_storage.py")
+2017-12-15T20:17:01: Analyzing "oauth2client.contrib.flask_util" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\oauth2client\contrib\flask_util.py")
+2017-12-15T20:17:01: Analyzing "oauth2client.contrib.gce" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\oauth2client\contrib\gce.py")
+2017-12-15T20:17:01: Analyzing "oauth2client.contrib.keyring_storage" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\oauth2client\contrib\keyring_storage.py")
+2017-12-15T20:17:01: Analyzing "oauth2client.contrib.multiprocess_file_storage" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\oauth2client\contrib\multiprocess_file_storage.py")
+2017-12-15T20:17:01: Analyzing "oauth2client.contrib.sqlalchemy" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\oauth2client\contrib\sqlalchemy.py")
+2017-12-15T20:17:01: Analyzing "oauth2client.contrib.xsrfutil" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\oauth2client\contrib\xsrfutil.py")
+2017-12-15T20:17:01: Analyzing "oauth2client.contrib._appengine_ndb" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\oauth2client\contrib\_appengine_ndb.py")
+2017-12-15T20:17:01: Analyzing "oauth2client.contrib._metadata" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\oauth2client\contrib\_metadata.py")
+2017-12-15T20:17:01: Analyzing "oauth2client.contrib" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\oauth2client\contrib\__init__.py")
+2017-12-15T20:17:01: Analyzing "oauth2client.contrib.django_util.apps" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\oauth2client\contrib\django_util\apps.py")
+2017-12-15T20:17:01: Analyzing "oauth2client.contrib.django_util.decorators" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\oauth2client\contrib\django_util\decorators.py")
+2017-12-15T20:17:01: Analyzing "oauth2client.contrib.django_util.models" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\oauth2client\contrib\django_util\models.py")
+2017-12-15T20:17:01: Analyzing "oauth2client.contrib.django_util.signals" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\oauth2client\contrib\django_util\signals.py")
+2017-12-15T20:17:01: Analyzing "oauth2client.contrib.django_util.site" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\oauth2client\contrib\django_util\site.py")
+2017-12-15T20:17:01: Analyzing "oauth2client.contrib.django_util.storage" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\oauth2client\contrib\django_util\storage.py")
+2017-12-15T20:17:01: Analyzing "oauth2client.contrib.django_util.views" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\oauth2client\contrib\django_util\views.py")
+2017-12-15T20:17:01: Analyzing "oauth2client.contrib.django_util" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\oauth2client\contrib\django_util\__init__.py")
+2017-12-15T20:17:01: Starting analysis of 33 modules
+2017-12-15T20:17:03: Analysis complete
+2017-12-15T20:17:03: Saving group "c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\oauth2client"
+2017-12-15T20:17:04: [ERROR] oauth2client.client._save_private_file: Unknown has no name
+2017-12-15T20:17:04: [ERROR] oauth2client.client.save_to_well_known_file: Unknown has no name
+2017-12-15T20:17:04: [ERROR] oauth2client.client._get_application_default_credential_from_file: Unknown has no name
+2017-12-15T20:17:04: [ERROR] oauth2client.client._get_well_known_file: Unknown has no name
+2017-12-15T20:17:04: [ERROR] oauth2client.client._raise_exception_for_reading_json: Unknown has no name
+2017-12-15T20:17:04: End of group "c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\oauth2client"
+2017-12-15T20:17:04: Start group "c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1" with 36 files
+2017-12-15T20:17:04: Parsing complete
+2017-12-15T20:17:04: Analyzing "pyasn1.debug" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1\debug.py")
+2017-12-15T20:17:04: Analyzing "pyasn1.error" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1\error.py")
+2017-12-15T20:17:04: Analyzing "pyasn1" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1\__init__.py")
+2017-12-15T20:17:04: Analyzing "pyasn1.codec" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1\codec\__init__.py")
+2017-12-15T20:17:04: Analyzing "pyasn1.codec.ber.decoder" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1\codec\ber\decoder.py")
+2017-12-15T20:17:04: Analyzing "pyasn1.codec.ber.encoder" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1\codec\ber\encoder.py")
+2017-12-15T20:17:04: Analyzing "pyasn1.codec.ber.eoo" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1\codec\ber\eoo.py")
+2017-12-15T20:17:04: Analyzing "pyasn1.codec.ber" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1\codec\ber\__init__.py")
+2017-12-15T20:17:04: Analyzing "pyasn1.codec.cer.decoder" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1\codec\cer\decoder.py")
+2017-12-15T20:17:04: Analyzing "pyasn1.codec.cer.encoder" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1\codec\cer\encoder.py")
+2017-12-15T20:17:04: Analyzing "pyasn1.codec.cer" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1\codec\cer\__init__.py")
+2017-12-15T20:17:04: Analyzing "pyasn1.codec.der.decoder" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1\codec\der\decoder.py")
+2017-12-15T20:17:04: Analyzing "pyasn1.codec.der.encoder" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1\codec\der\encoder.py")
+2017-12-15T20:17:04: Analyzing "pyasn1.codec.der" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1\codec\der\__init__.py")
+2017-12-15T20:17:04: Analyzing "pyasn1.codec.native.decoder" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1\codec\native\decoder.py")
+2017-12-15T20:17:04: Analyzing "pyasn1.codec.native.encoder" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1\codec\native\encoder.py")
+2017-12-15T20:17:04: Analyzing "pyasn1.codec.native" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1\codec\native\__init__.py")
+2017-12-15T20:17:04: Analyzing "pyasn1.compat.binary" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1\compat\binary.py")
+2017-12-15T20:17:04: Analyzing "pyasn1.compat.calling" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1\compat\calling.py")
+2017-12-15T20:17:04: Analyzing "pyasn1.compat.dateandtime" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1\compat\dateandtime.py")
+2017-12-15T20:17:04: Analyzing "pyasn1.compat.integer" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1\compat\integer.py")
+2017-12-15T20:17:04: Analyzing "pyasn1.compat.octets" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1\compat\octets.py")
+2017-12-15T20:17:04: Analyzing "pyasn1.compat.string" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1\compat\string.py")
+2017-12-15T20:17:04: Analyzing "pyasn1.compat" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1\compat\__init__.py")
+2017-12-15T20:17:04: Analyzing "pyasn1.type.base" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1\type\base.py")
+2017-12-15T20:17:04: Analyzing "pyasn1.type.char" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1\type\char.py")
+2017-12-15T20:17:04: Analyzing "pyasn1.type.constraint" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1\type\constraint.py")
+2017-12-15T20:17:04: Analyzing "pyasn1.type.error" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1\type\error.py")
+2017-12-15T20:17:04: Analyzing "pyasn1.type.namedtype" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1\type\namedtype.py")
+2017-12-15T20:17:04: Analyzing "pyasn1.type.namedval" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1\type\namedval.py")
+2017-12-15T20:17:04: Analyzing "pyasn1.type.opentype" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1\type\opentype.py")
+2017-12-15T20:17:04: Analyzing "pyasn1.type.tag" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1\type\tag.py")
+2017-12-15T20:17:04: Analyzing "pyasn1.type.tagmap" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1\type\tagmap.py")
+2017-12-15T20:17:04: Analyzing "pyasn1.type.univ" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1\type\univ.py")
+2017-12-15T20:17:04: Analyzing "pyasn1.type.useful" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1\type\useful.py")
+2017-12-15T20:17:04: Analyzing "pyasn1.type" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1\type\__init__.py")
+2017-12-15T20:17:04: Starting analysis of 36 modules
+2017-12-15T20:17:05: Analysis complete
+2017-12-15T20:17:05: Saving group "c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1"
+2017-12-15T20:17:06: End of group "c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1"
+2017-12-15T20:17:06: Start group "c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1_modules" with 27 files
+2017-12-15T20:17:06: Parsing complete
+2017-12-15T20:17:06: Analyzing "pyasn1_modules.pem" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1_modules\pem.py")
+2017-12-15T20:17:06: Analyzing "pyasn1_modules.rfc1155" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1_modules\rfc1155.py")
+2017-12-15T20:17:06: Analyzing "pyasn1_modules.rfc1157" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1_modules\rfc1157.py")
+2017-12-15T20:17:06: Analyzing "pyasn1_modules.rfc1901" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1_modules\rfc1901.py")
+2017-12-15T20:17:06: Analyzing "pyasn1_modules.rfc1902" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1_modules\rfc1902.py")
+2017-12-15T20:17:06: Analyzing "pyasn1_modules.rfc1905" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1_modules\rfc1905.py")
+2017-12-15T20:17:06: Analyzing "pyasn1_modules.rfc2251" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1_modules\rfc2251.py")
+2017-12-15T20:17:06: Analyzing "pyasn1_modules.rfc2314" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1_modules\rfc2314.py")
+2017-12-15T20:17:06: Analyzing "pyasn1_modules.rfc2315" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1_modules\rfc2315.py")
+2017-12-15T20:17:06: Analyzing "pyasn1_modules.rfc2437" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1_modules\rfc2437.py")
+2017-12-15T20:17:06: Analyzing "pyasn1_modules.rfc2459" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1_modules\rfc2459.py")
+2017-12-15T20:17:06: Analyzing "pyasn1_modules.rfc2511" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1_modules\rfc2511.py")
+2017-12-15T20:17:06: Analyzing "pyasn1_modules.rfc2560" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1_modules\rfc2560.py")
+2017-12-15T20:17:06: Analyzing "pyasn1_modules.rfc3279" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1_modules\rfc3279.py")
+2017-12-15T20:17:06: Analyzing "pyasn1_modules.rfc3280" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1_modules\rfc3280.py")
+2017-12-15T20:17:06: Analyzing "pyasn1_modules.rfc3281" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1_modules\rfc3281.py")
+2017-12-15T20:17:06: Analyzing "pyasn1_modules.rfc3412" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1_modules\rfc3412.py")
+2017-12-15T20:17:06: Analyzing "pyasn1_modules.rfc3414" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1_modules\rfc3414.py")
+2017-12-15T20:17:06: Analyzing "pyasn1_modules.rfc3447" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1_modules\rfc3447.py")
+2017-12-15T20:17:06: Analyzing "pyasn1_modules.rfc3852" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1_modules\rfc3852.py")
+2017-12-15T20:17:06: Analyzing "pyasn1_modules.rfc4210" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1_modules\rfc4210.py")
+2017-12-15T20:17:06: Analyzing "pyasn1_modules.rfc4211" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1_modules\rfc4211.py")
+2017-12-15T20:17:06: Analyzing "pyasn1_modules.rfc5208" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1_modules\rfc5208.py")
+2017-12-15T20:17:06: Analyzing "pyasn1_modules.rfc5280" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1_modules\rfc5280.py")
+2017-12-15T20:17:06: Analyzing "pyasn1_modules.rfc5652" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1_modules\rfc5652.py")
+2017-12-15T20:17:06: Analyzing "pyasn1_modules.rfc6402" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1_modules\rfc6402.py")
+2017-12-15T20:17:06: Analyzing "pyasn1_modules" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1_modules\__init__.py")
+2017-12-15T20:17:06: Starting analysis of 27 modules
+2017-12-15T20:17:07: Analysis complete
+2017-12-15T20:17:07: Saving group "c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1_modules"
+2017-12-15T20:17:08: End of group "c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\pyasn1_modules"
+2017-12-15T20:17:08: Start group "c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\rsa" with 18 files
+2017-12-15T20:17:08: Parsing complete
+2017-12-15T20:17:08: Analyzing "rsa.asn1" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\rsa\asn1.py")
+2017-12-15T20:17:08: Analyzing "rsa.bigfile" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\rsa\bigfile.py")
+2017-12-15T20:17:08: Analyzing "rsa.cli" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\rsa\cli.py")
+2017-12-15T20:17:08: Analyzing "rsa.common" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\rsa\common.py")
+2017-12-15T20:17:08: Analyzing "rsa.core" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\rsa\core.py")
+2017-12-15T20:17:08: Analyzing "rsa.key" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\rsa\key.py")
+2017-12-15T20:17:08: Analyzing "rsa.parallel" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\rsa\parallel.py")
+2017-12-15T20:17:08: Analyzing "rsa.pem" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\rsa\pem.py")
+2017-12-15T20:17:08: Analyzing "rsa.pkcs1" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\rsa\pkcs1.py")
+2017-12-15T20:17:08: Analyzing "rsa.prime" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\rsa\prime.py")
+2017-12-15T20:17:08: Analyzing "rsa.randnum" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\rsa\randnum.py")
+2017-12-15T20:17:08: Analyzing "rsa.transform" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\rsa\transform.py")
+2017-12-15T20:17:08: Analyzing "rsa.util" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\rsa\util.py")
+2017-12-15T20:17:08: Analyzing "rsa.varblock" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\rsa\varblock.py")
+2017-12-15T20:17:08: Analyzing "rsa._compat" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\rsa\_compat.py")
+2017-12-15T20:17:08: Analyzing "rsa._version133" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\rsa\_version133.py")
+2017-12-15T20:17:08: Analyzing "rsa._version200" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\rsa\_version200.py")
+2017-12-15T20:17:08: Analyzing "rsa" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\rsa\__init__.py")
+2017-12-15T20:17:08: Starting analysis of 18 modules
+2017-12-15T20:17:09: Analysis complete
+2017-12-15T20:17:09: Saving group "c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\rsa"
+2017-12-15T20:17:10: End of group "c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\rsa"
+2017-12-15T20:17:10: Start group "c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\uritemplate" with 4 files
+2017-12-15T20:17:10: Parsing complete
+2017-12-15T20:17:10: Analyzing "uritemplate.api" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\uritemplate\api.py")
+2017-12-15T20:17:10: Analyzing "uritemplate.template" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\uritemplate\template.py")
+2017-12-15T20:17:10: Analyzing "uritemplate.variable" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\uritemplate\variable.py")
+2017-12-15T20:17:10: Analyzing "uritemplate" ("c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\uritemplate\__init__.py")
+2017-12-15T20:17:10: Starting analysis of 4 modules
+2017-12-15T20:17:11: Analysis complete
+2017-12-15T20:17:11: Saving group "c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\uritemplate"
+2017-12-15T20:17:11: End of group "c:\users\aroki\source\repos\itbones\itbones\env\lib\site-packages\uritemplate"
+2017-12-15T20:17:14: Deleting 0 files
+
+2017-12-16T11:15:34: Start analysis
+2017-12-16T11:15:35: IncludeModulesFromModulePath = win32com
+2017-12-16T11:15:38: Deleting 0 files
+
+2017-12-16T16:19:54: Start analysis
+2017-12-16T16:19:54: IncludeModulesFromModulePath = win32com
+2017-12-16T16:19:59: Deleting 0 files
+
+2017-12-17T11:54:18: Start analysis
+2017-12-17T11:54:18: IncludeModulesFromModulePath = win32com
+2017-12-17T11:54:21: Deleting 0 files

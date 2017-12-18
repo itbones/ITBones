@@ -1,6 +1,6 @@
 # docs tables.py
 import django_tables2 as tables
-from .models import doc_m_docmaster
+from .models import doc_m_docmaster,doc_m_files
 from django_tables2.utils import A  # alias for Accessor
 
 
@@ -74,3 +74,9 @@ class doc_t_docmaster(tables.Table):
 #            'notes': ('Notes'),
 #        }
 #        attrs = {'class': 'paleblue'}
+class doc_t_files(tables.Table):
+    class Meta:
+        model = doc_m_files
+        fields = ('id','file_name','file_data',)
+        attrs = {'class': 'paleblue'}
+

@@ -123,10 +123,12 @@
     <Content Include="app\templates\app\signup.html" />
     <Content Include="ITBones\CodeReference.txt" />
     <Content Include="ITBones\docs\templates\docs\changedoc.html" />
+    <Content Include="ITBones\docs\templates\docs\index.html" />
     <Content Include="ITBones\docs\templates\docs\layout.html" />
     <Content Include="ITBones\docs\templates\docs\adddoc.html" />
     <Content Include="ITBones\docs\templates\docs\doclist.html" />
     <Content Include="ITBones\docs\templates\docs\displaydoc.html" />
+    <Content Include="ITBones\login.jpg" />
     <Content Include="ITBones\money\templates\money\addstock.html" />
     <Content Include="ITBones\money\templates\money\display_stock.html" />
     <Content Include="ITBones\money\templates\money\index.html" />
