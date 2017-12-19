@@ -18,7 +18,9 @@ class doc_m_docmaster(models.Model):
 
 class doc_m_files(models.Model):
     id = models.AutoField( primary_key=True)
-    file_name = models.CharField(max_length=200)
+    file_name = models.CharField(max_length=200,blank=True)
+    file_url = models.CharField(max_length=800,blank=True)
+    file_gname = models.CharField(max_length=800,blank=True)
     file_data_public = models.FileField(upload_to='ITBones_Public', storage=gd_storage,blank=True)
     file_data_private = models.FileField(upload_to='ITBones_Private', storage=gd_storage,blank=True)
 

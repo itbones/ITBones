@@ -122,6 +122,7 @@
   <ItemGroup>
     <Content Include="app\templates\app\signup.html" />
     <Content Include="ITBones\CodeReference.txt" />
+    <Content Include="ITBones\docs\templates\docs\changedoc1.html" />
     <Content Include="ITBones\docs\templates\docs\changedoc.html" />
     <Content Include="ITBones\docs\templates\docs\index.html" />
     <Content Include="ITBones\docs\templates\docs\layout.html" />

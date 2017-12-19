@@ -52,10 +52,15 @@
 
 
 
-  {% buttons %}
-    <button type="submit" class="btn btn-primary" name="add_doc">
-      {% bootstrap_icon "star" %} Add Document
+ {% buttons %}
+    <button type="submit" class="btn btn-primary" name="change_stock">
+      {% bootstrap_icon "star" %} Change Document
     </button>
+        <button type="submit" class="btn btn-danger" name="delete_stock">
+      {% bootstrap_icon "trash" %} Delete Document
+    </button>
+   <a href="/docs" class="btn btn-warning" role="button">Cancel</a>
+
    
   
   {% endbuttons %}
