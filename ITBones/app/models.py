@@ -18,3 +18,12 @@ def update_user_profile(sender, instance, created, **kwargs):
     if created:
         Profile.objects.create(user=instance)
     instance.profile.save()
+
+class admin_visitor(models.Model):
+    ip_add = models.CharField(max_length=100,blank=True)
+    viewname  = models.CharField(max_length=100,blank=True)
+    userid = models.CharField(max_length=100,blank=True)
+    logstamp = models.CharField(max_length=100,blank=True)
+
+    def __str__(self):              # __unicode__ on Python 2
+        return self.userid

@@ -31,12 +31,16 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="app\admin.py" />
     <Compile Include="app\forms.py" />
     <Compile Include="app\models.py" />
     <Compile Include="app\tests.py" />
     <Compile Include="app\views.py" />
     <Compile Include="app\__init__.py" />
     <Compile Include="app\migrations\__init__.py" />
+    <Compile Include="ITBones\base_admin.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="ITBones\docs\admin.py" />
     <Compile Include="ITBones\docs\apps.py" />
     <Compile Include="ITBones\docs\forms.py" />
@@ -47,6 +51,7 @@
     <Compile Include="ITBones\docs\urls.py" />
     <Compile Include="ITBones\docs\views.py" />
     <Compile Include="ITBones\docs\__init__.py" />
+    <Compile Include="ITBones\models.py" />
     <Compile Include="ITBones\money\admin.py" />
     <Compile Include="ITBones\money\apps.py" />
     <Compile Include="ITBones\money\forms.py">

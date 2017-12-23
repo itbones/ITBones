@@ -23,6 +23,7 @@ class doc_m_files(models.Model):
     file_gname = models.CharField(max_length=800,blank=True)
     file_data_public = models.FileField(upload_to='ITBones_Public', storage=gd_storage,blank=True)
     file_data_private = models.FileField(upload_to='ITBones_Private', storage=gd_storage,blank=True)
+    file_data_local = models.FileField(upload_to='Documents',blank=True)
 
     def __str__(self):              # __unicode__ on Python 2
         return self.file_name

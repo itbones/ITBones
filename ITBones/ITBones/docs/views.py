@@ -3,6 +3,7 @@ from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponseRedirect, HttpResponse,HttpRequest
 from django.contrib import messages
 from datetime import datetime
+from app.models import admin_visitor
 
 from django.shortcuts import render
 from .forms import doc_f_docmaster,doc_f_files
@@ -10,11 +11,13 @@ from .models import doc_m_docmaster,doc_m_files
 import datetime
 from .tables import doc_t_docmaster,doc_t_files
 from django_tables2 import RequestConfig
+from ITBones.base_admin import log_visitor
 
 import smtplib
 
 # Create your docs views here.
 def index(request):
+    log_visitor(request)
     search = ''
     try: 
         search = request.GET['search']
@@ -36,53 +39,62 @@ def index(request):
 
 
 def adddoc(request):
-    if request.method == "POST":
-        # This is form class
-        form = doc_f_docmaster(request.POST,request.FILES)
-        form.valid = True
-        if form.is_valid():
-            try:
-                fileupload = doc_m_files(file_data_public=request.FILES['file_data_private'])
-                fileupload = populatefile_db(fileupload)
-            except:
-                fileupload = None
+    log_visitor(request)
+    if request.user.is_authenticated():
+        if request.method == "POST":
+            # This is form class
+            form = doc_f_docmaster(request.POST,request.FILES)
+            form.valid = True
+            if form.is_valid():
+                try:
+                    fileupload = doc_m_files(file_data_local=request.FILES['file_data_private'])
+                    #if fileupload.file_data_public.url == '':
+                    #    time.sleep(5)
+                    #fileupload = populatefile_db(fileupload)
+                except:
+                    fileupload = None
 
-            if 'add_doc' in request.POST:
-                post = form.save(commit=False)
-                post.stock_type = 'SH'
-                post.save()
-            elif 'upload_public' in request.POST: 
-                fileupload.file_name = fileupload.file_data_public.name
-                fileupload.save()
-              # Formatting google drive string
-                str1 =  fileupload.file_data_public.url
-                str2 = str1.replace("https://drive.google.com/file/d/","https://docs.google.com/uc?id=")
-                str3 = str2.replace("/view?usp=drivesdk","")
-              #  form = doc_f_docmaster(instance=form)
-              #  form.file_name = fileupload.file_data
-                docupload = doc_f_files()
-                return render(request, 'docs/adddoc.html', {'form': form , 'file' : docupload , 'attlink':str3  })
-            elif 'upload_private' in request.POST: 
-                fileupload.file_name = fileupload.file_data_public.name
-                fileupload.file_data_private = fileupload.file_data_public
-                fileupload.file_data_public = None
-                fileupload.save()
-              # Formatting google drive string
-                str1 =  fileupload.file_data_private.url
-                str2 = str1.replace("https://drive.google.com/file/d/","https://docs.google.com/uc?id=")
-                str3 = str2.replace("/view?usp=drivesdk","")
-                str3 = str1
-              #  form = doc_f_docmaster(instance=form)
-              #  form.file_name = fileupload.file_data
-                docupload = doc_f_files()
-                return render(request, 'docs/adddoc.html', {'form': form , 'file' : docupload , 'attlink':str3  })
-        return redirect('Doc_List')
+                if 'add_doc' in request.POST:
+                    post = form.save(commit=False)
+                    post.stock_type = 'SH'
+                    post.save()
+                elif 'upload_public' in request.POST: 
+                    #fileupload.file_name = fileupload.file_data_public.name
+                    fileupload.save()
+                  # Formatting google drive string
+                    #str1 =  fileupload.file_data_public.url
+                    #str2 = str1.replace("https://drive.google.com/file/d/","https://docs.google.com/uc?id=")
+                    #str3 = str2.replace("/view?usp=drivesdk","")
+                  #  form = doc_f_docmaster(instance=form)
+                  #  form.file_name = fileupload.file_data
+                    str3 = fileupload.file_data_local.url
+                    docupload = doc_f_files()
+                    return render(request, 'docs/adddoc.html', {'form': form , 'file' : docupload , 'attlink':str3  })
+                elif 'upload_private' in request.POST: 
+                    fileupload.file_name = fileupload.file_data_public.name
+                    fileupload.file_data_private = fileupload.file_data_public
+                    fileupload.file_data_public = None
+                    fileupload.save()
+                  # Formatting google drive string
+                    str1 =  fileupload.file_data_private.url
+                    str2 = str1.replace("https://drive.google.com/file/d/","https://docs.google.com/uc?id=")
+                    str3 = str2.replace("/view?usp=drivesdk","")
+                    str3 = str1
+                  #  form = doc_f_docmaster(instance=form)
+                  #  form.file_name = fileupload.file_data
+                    docupload = doc_f_files()
+                    return render(request, 'docs/adddoc.html', {'form': form , 'file' : docupload , 'attlink':str3  })
+            return redirect('Doc_List')
+        else:
+            form = doc_f_docmaster()
+            docupload = doc_f_files()
+            return render(request, 'docs/adddoc.html', {'form': form , 'file' : docupload }) 
     else:
-        form = doc_f_docmaster()
-        docupload = doc_f_files()
-        return render(request, 'docs/adddoc.html', {'form': form , 'file' : docupload }) 
+        return HttpResponseRedirect('/login')
+
     
 def doclist(request):
+    log_visitor(request)
     doc_list = doc_m_docmaster.objects.order_by('-doc_area')
     table = doc_t_docmaster(doc_list)
     RequestConfig(request).configure(table)
@@ -94,6 +106,7 @@ def doclist(request):
     return render(request, 'docs/doclist.html', {'table': table,'table1':table1})
 
 def displaydoc(request,doc_id):
+    log_visitor(request)
     post = get_object_or_404(doc_m_docmaster, pk=doc_id) 
     try:
        form = doc_f_docmaster(instance=post)
@@ -107,54 +120,64 @@ def displaydoc(request,doc_id):
        raise Http404("Document not exist")
 
 def changedoc(request,doc_id):
-    post = get_object_or_404(doc_m_docmaster, pk=doc_id)
-    if request.method == "POST":
-        form = doc_f_docmaster(request.POST, instance=post) 
-        if form.is_valid():
+    log_visitor(request)
+    if request.user.is_authenticated():
+        post = get_object_or_404(doc_m_docmaster, pk=doc_id)
+        if request.method == "POST":
+            form = doc_f_docmaster(request.POST, instance=post) 
+            if form.is_valid():
+                try:
+                    #fileupload = doc_m_files(file_data_public=request.FILES['file_data_private'])
+                    #if fileupload.file_data_public.url == '':
+                    #    time.sleep(5)
+                    #fileupload = populatefile_db(fileupload)
+                    fileupload = doc_m_files(file_data_local=request.FILES['file_data_private'])
+                    #fileupload = populatefile_db(fileupload)
+                except:
+                    fileupload = None
+                if 'delete_stock' in request.POST:
+                    # Stock Deleted
+                    post.delete()    
+                elif 'change_stock' in request.POST: 
+                    # Stock Changes         
+                    form.save()
+                elif 'upload_public' in request.POST: 
+                    #fileupload.file_name = fileupload.file_data_public.name
+                    fileupload.save()
+                  # Formatting google drive string
+                    #str1 =  fileupload.file_data_public.url
+                    #str2 = str1.replace("https://drive.google.com/file/d/","https://docs.google.com/uc?id=")
+                    #str3 = str2.replace("/view?usp=drivesdk","")
+                    str3 = fileupload.file_data_local.url
+                  #  form = doc_f_docmaster(instance=form)
+                  #  form.file_name = fileupload.file_data
+                    docupload = doc_f_files()
+                    return render(request, 'docs/changedoc1.html', {'form': form , 'file' : docupload , 'attlink':str3  })
+                elif 'upload_private' in request.POST: 
+                    fileupload.file_name = fileupload.file_data_public.name
+                    fileupload.file_data_private = fileupload.file_data_public
+                    fileupload.file_data_public = None
+                    fileupload.save()
+                  # Formatting google drive string
+                    str1 =  fileupload.file_data_private.url
+                    str2 = str1.replace("https://drive.google.com/file/d/","https://docs.google.com/uc?id=")
+                    str3 = str2.replace("/view?usp=drivesdk","")
+                    str3 = str1
+                  #  form = doc_f_docmaster(instance=form)
+                  #  form.file_name = fileupload.file_data
+                    docupload = doc_f_files()
+                    return render(request, 'docs/changedoc1.html', {'form': form , 'file' : docupload , 'attlink':str3  })
+                return redirect('Doc_List')
+        else:   
             try:
-                fileupload = doc_m_files(file_data_public=request.FILES['file_data_private'])
-                fileupload = populatefile_db(fileupload)
-            except:
-                fileupload = None
-            if 'delete_stock' in request.POST:
-                # Stock Deleted
-                post.delete()    
-            elif 'change_stock' in request.POST: 
-                # Stock Changes         
-                form.save()
-            elif 'upload_public' in request.POST: 
-                fileupload.file_name = fileupload.file_data_public.name
-                fileupload.save()
-              # Formatting google drive string
-                str1 =  fileupload.file_data_public.url
-                str2 = str1.replace("https://drive.google.com/file/d/","https://docs.google.com/uc?id=")
-                str3 = str2.replace("/view?usp=drivesdk","")
-              #  form = doc_f_docmaster(instance=form)
-              #  form.file_name = fileupload.file_data
+                form = doc_f_docmaster(instance=post)
                 docupload = doc_f_files()
-                return render(request, 'docs/changedoc1.html', {'form': form , 'file' : docupload , 'attlink':str3  })
-            elif 'upload_private' in request.POST: 
-                fileupload.file_name = fileupload.file_data_public.name
-                fileupload.file_data_private = fileupload.file_data_public
-                fileupload.file_data_public = None
-                fileupload.save()
-              # Formatting google drive string
-                str1 =  fileupload.file_data_private.url
-                str2 = str1.replace("https://drive.google.com/file/d/","https://docs.google.com/uc?id=")
-                str3 = str2.replace("/view?usp=drivesdk","")
-                str3 = str1
-              #  form = doc_f_docmaster(instance=form)
-              #  form.file_name = fileupload.file_data
-                docupload = doc_f_files()
-                return render(request, 'docs/changedoc1.html', {'form': form , 'file' : docupload , 'attlink':str3  })
-            return redirect('Doc_List')
-    else:   
-        try:
-            form = doc_f_docmaster(instance=post)
-            docupload = doc_f_files()
-            return render(request, 'docs/changedoc1.html', {'form': form , 'file' : docupload})
-        except Stock.DoesNotExist:
-            raise Http404("Document doesnt exist")
+                return render(request, 'docs/changedoc1.html', {'form': form , 'file' : docupload})
+            except Stock.DoesNotExist:
+                raise Http404("Document doesnt exist")
+    else:
+        return HttpResponseRedirect('/login')
+
 
 
 def mask_private(content):
@@ -175,10 +198,15 @@ def mask_private(content):
         return ""
 
 def populatefile_db(fileupload):
-    fileupload.file_name = fileupload.file_data_public.name
-    fileupload.file_url = fileupload.file_data_public.url
-    str1 =  fileupload.file_data_public.url
-    str2 = str1.replace("https://drive.google.com/file/d/","")
-    str3 = str2.replace("/view?usp=drivesdk","")
-    fileupload.file_gname = str3
+    #fileupload.file_name = fileupload.file_data_public.name
+    #fileupload.file_url = fileupload.file_data_public.url
+    #str1 =  fileupload.file_data_public.url
+    #str2 = str1.replace("https://drive.google.com/file/d/","")
+    #str3 = str2.replace("/view?usp=drivesdk","")
+    #fileupload.file_gname = str3
+    #return(fileupload)
+
+    fileupload.file_name = fileupload.file_data_local.name
+    str = fileupload.file_data_local.url.replace('media','media/Documents')
+    fileupload.file_url = fileupload.file_data_local.url
     return(fileupload)
